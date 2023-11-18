@@ -5,7 +5,7 @@
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
-    basePath : isProd ? "/next-js-blog-deployment" : "",
+    basePath : isProd ? "/blog" : "",
     output: 'export',
     distDir: 'dist',
     images : { 
