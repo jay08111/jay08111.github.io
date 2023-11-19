@@ -1,7 +1,6 @@
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
 import Layout from '../components/layout'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
@@ -22,7 +21,11 @@ export default function Index({ allPosts }: Props) {
           <title>xorboolean</title>
         </Head>
         <Container>
-          <Intro />
+          <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
+              Blog.
+            </h1>
+          </section>
           {heroPost && (
             <HeroPost
               title={heroPost.title}
