@@ -1,7 +1,6 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
-import { config } from 'process'
 import { basePath } from '../next.config';
 
 const postsDirectory = join(process.cwd(), '_posts')
@@ -11,8 +10,8 @@ export function getPostSlugs() {
 }
 
 export function getPostBySlug(slug: string, fields: string[] = []) {
-  const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(postsDirectory, `${realSlug}.md`)
+  const realSlug = slug.replace(/\.mdx$/, '')
+  const fullPath = join(postsDirectory, `${realSlug}.mdx`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
