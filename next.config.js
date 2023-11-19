@@ -9,7 +9,8 @@ const nextConfig = {
     output: 'export',
     distDir: 'dist',
     images : { 
-        unoptimized : true
+        unoptimized : true,
+        domains: ["images.unsplash.com", "cdn.pixabay.com", "images.pexel.com"],
     }
   }
    
