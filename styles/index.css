@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root { 
+    --border-rgb : #F2F2F2;
+}
+
+.thumbnail { 
+    width: 428px;
+    height: 214px;
+    object-fit: cover;
+}
