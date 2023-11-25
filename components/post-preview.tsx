@@ -11,15 +11,16 @@ type IProps = {
   excerpt: string
   author: Author
   slug: string
+  isThumbnail : boolean
 }
 
 const PostPreview = (props: IProps) => {
-  const { title, coverImage, date, excerpt, slug } = props;
+  const { title, coverImage, date, excerpt, slug , isThumbnail } = props;
 
   return (
     <div className="border-b-gray-300">
       <div className="mb-5">
-        <CoverImage slug={slug} title={title} src={coverImage} />
+        <CoverImage slug={slug} title={title} src={coverImage} isThumbnail={isThumbnail}/>
       </div>
       <div className="text-lg mb-4">
           <DateFormatter dateString={date} />
