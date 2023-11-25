@@ -7,18 +7,20 @@ type IProps = {
   src: string
   slug?: string
   isHero?: boolean
+  isThumbnail?: boolean
 }
 
 const CoverImage = (props: IProps) => {
-  const { title, src, slug , isHero } = props;
+  const { title, src, slug , isHero , isThumbnail = false } = props;
 
   const image = (
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
-      className={cn('shadow-sm w-full thumbnail', {
-        'hover:shadow-lg transition-shadow duration-200': slug,
-        '!h-full': isHero 
+      className={cn("shadow-sm w-full", {
+        "hover:shadow-lg transition-shadow duration-200" : slug,
+        "!h-full": isHero,
+        "thumbnail" : isThumbnail 
       })}
       width={1300}
       height={630}
